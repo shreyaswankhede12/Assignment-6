@@ -1,0 +1,80 @@
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment $6$\\ Probability and random Variables} 
+\institute{Indian Institute of Technology Hyderabad}
+\author{Shreyas Wankhede}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+      \titlepage 
+\end{frame} 
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+
+\section{Example Question}
+\begin{frame}{Example Question}
+\textbf{Papoulis book example 4.5}\\\vspace{5mm}
+A telephone call occurs at random in the interval (0, 1). In this experiment. the
+outcomes are time distances t between 0 and 1 and the probability that t is between t1
+and t2 is given by 
+\begin{align}
+   P\{t_1\le t \le t_2\}= t_2 - t_1 \nonumber
+\end{align}
+We define the random variable x such that
+\begin{align}
+    x(t) = t \hspace{5mm} 0\le t\le 1 \nonumber
+\end{align}
+
+\end{frame}
+
+\section{Explanation}
+\begin{frame}{Explanation}
+ Thus the variable t has a double meaning: It is the outcome of the experiment and the
+corresponding value x(t) of the random variable:x. We shall show that the distribution
+function F(x) of x is a ramp as in Fig.1. \\
+  If $x>1$, then $X(t) \le x$ for every outcome of. Hence,
+  \begin{align}
+      F(x) =P\{X\le x\} = P\{ 0\le t \le 1\}= P(S) =1 \nonumber
+  \end{align}
+\end{frame} 
+
+\begin{frame}{figure}
+       \begin{figure}
+              \includegraphics[width=3in,height=2.4in]{Figure_1.png}
+              \caption{fig-1}
+              \label{fiure-1}
+            \end{figure}
+\end{frame}
+
+\begin{frame}
+\hspace*{10mm}If $x>1$, then $X(t)\le x$ for every outcome. Hence,\\
+\hspace*{20mm}$F(x) = P\{X\le x\} = P\{0\le t \le 1\}= P(S)=1$\\
+\vspace*{10mm}   
+\hspace*{10mm}If $0 \le x \le 1$, then $X(t)\le x$ for every $t$ in the interval $(0,x)$. Hence,\\
+\hspace*{20mm}$F(x) = P\{X\le x\} = P\{0\le t \le x\}=x \hspace*{3mm} 0\le x \le 1 $\\     
+\vspace*{10mm}    
+\hspace*{10mm}If $x<0$, then $\{X \le x\}$ is the impossible event for $x(t) \ge 0$. Hence,\\
+\hspace*{20mm}$F(x) = P\{X\le x\} = 0$ \hspace*{3mm} $x<0$\\              
+\end{frame}
+
+\end{document}
